@@ -2,6 +2,14 @@ FROM ubuntu:latest
 LABEL maintainer "Ralph Plawetzki <ralph@purejava.org>"
 ENV DEBIAN_FRONTEND noninteractive
 
+# Run the docker image as a GUI app on macOS
+# ------------------------------------------
+# brew install socat
+# brew cask install xquartz
+# open -a XQuartz (ignore the xterm that opens or close it)
+# socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\" &
+# docker run -e DISPLAY=<your_IPv4_address>:0 -v ~/Documents/Notebooks/book:/home/developer/Notebooks/book --name zim purejava/docker-zim
+
 RUN apt-get update && apt-get install -y \
   zim \
   hicolor-icon-theme \
