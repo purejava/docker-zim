@@ -12,6 +12,8 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && apt-get install -y \
   zim \
+  python-gtkspellcheck \
+  python-gtksourceview2 \
   hicolor-icon-theme \
   libcanberra-gtk-module \
   bzr \
@@ -24,10 +26,10 @@ RUN apt-get update && apt-get install -y \
   && rm -rf /var/lib/apt/lists/*
 
 # Set the locale
-RUN locale-gen en_US.UTF-8
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
-ENV LC_ALL en_US.UTF-8
+RUN locale-gen de_DE.UTF-8
+ENV LANG de_DE.UTF-8
+ENV LANGUAGE de_DE:de
+ENV LC_ALL de_DE.UTF-8
 
 # Replace 1000 with your user / group id
 RUN export uid=1000 gid=1000 && \
