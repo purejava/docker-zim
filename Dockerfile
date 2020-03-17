@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:focal
 LABEL maintainer "Ralph Plawetzki <ralph@purejava.org>"
 ENV DEBIAN_FRONTEND noninteractive
 
