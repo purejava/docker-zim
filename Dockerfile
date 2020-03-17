@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:focal
 LABEL maintainer "Ralph Plawetzki <ralph@purejava.org>"
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -12,9 +12,9 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && apt-get install -y \
   zim \
-  python-gtkspellcheck \
+  python3-gtkspellcheck \
   aspell-de \
-  python-gtksourceview2 \
+  libgtksourceview-3.0-1 \
   hicolor-icon-theme \
   libcanberra-gtk-module \
   bzr \
