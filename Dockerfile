@@ -13,6 +13,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y \
   zim \
   python3-gtkspellcheck \
+  gir1.2-gtkspell3-3.0 \
   aspell-de \
   gir1.2-gtksource-3.0 \
   hicolor-icon-theme \
