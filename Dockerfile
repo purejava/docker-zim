@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
   zim \
   python3-gtkspellcheck \
   aspell-de \
-  libgtksourceview-3.0-1 \
+  gir1.2-gtksource-3.0 \
   hicolor-icon-theme \
   libcanberra-gtk-module \
   bzr \
@@ -31,6 +31,8 @@ RUN locale-gen de_DE.UTF-8
 ENV LANG de_DE.UTF-8
 ENV LANGUAGE de_DE:de
 ENV LC_ALL de_DE.UTF-8
+
+RUN yes | unminimize
 
 # Replace 1000 with your user / group id
 RUN export uid=1000 gid=1000 && \
