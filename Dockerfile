@@ -1,4 +1,4 @@
-FROM ubuntu:focal
+FROM ubuntu:groovy
 LABEL maintainer "Ralph Plawetzki <ralph@purejava.org>"
 ENV DEBIAN_FRONTEND noninteractive
 
